@@ -1,7 +1,15 @@
 '''
+Exercício 01
+Soma de dois números: solicite ao usuário que insira dois números, em seguida, 
+realize a soma dos números e exiba o resultado.
+'''
+....
+
+'''
 Exercício 02
 Conversão de temperatura: solicite ao usuário que insira uma temperatura em 
 Celsius, converta e exiba em Fahrenheit. 
 
 Dica: °F = (°C x 9 ÷ 5) + 32
 '''
+....
