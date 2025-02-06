@@ -11,21 +11,22 @@ atribua um conceito à nota, conforme o caso:
 '''
 
 # Solicita ao usuário que insira uma nota de 0 a 100
-nota = int(input("Insira uma nota de 0 a 100: "))
+nota = int(input('Digite uma nota de 0 a 100: '))
 
 # Atribui um conceito à nota
 if nota >= 90:
-    conceito = "A"
+    conceito = 'A'
 elif nota >= 80:
-    conceito = "B"
+    conceito = 'B'
 elif nota >= 70:
-    conceito = "C"
+    conceito = 'C'
 elif nota >= 60:
-    conceito = "D"
+    conceito = 'D'
 elif nota >= 50:
-    conceito = "E"
+    conceito = 'E'
 else:
-    conceito = "F"
+    conceito = 'F'    
 
 # Exibe o conceito atribuído
-print(f"A nota {nota} corresponde ao conceito: {conceito}")
+print(f'O conceito atribuído à nota {nota} é {conceito}')
+

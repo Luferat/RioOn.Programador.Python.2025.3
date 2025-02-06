@@ -5,11 +5,12 @@ Celsius, converta e exiba em Fahrenheit.
 
 Dica: °F = (°C x 9 ÷ 5) + 32
 '''
+
 # Solicita ao usuário que insira uma temperatura em Celsius
-celsius = float(input("Insira a temperatura em Celsius: "))
+celcius = float(input('Digite a temperatura em Celsius: '))
 
 # Converte a temperatura para Fahrenheit
-fahrenheit = (celsius * 9 / 5) + 32
+fahrenheit = (celcius * 9 / 5) + 32
 
 # Exibe a temperatura convertida
-print(f"A temperatura em Fahrenheit é: {fahrenheit:.2f}°F")
+print(f'A temperatura de {celcius}°C é equivalente a {fahrenheit}°F')

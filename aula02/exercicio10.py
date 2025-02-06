@@ -17,23 +17,22 @@ print("3) x → Multiplicação")
 print("4) ÷ → Divisão")
 
 # Solicita ao usuário que escolha uma operação
-operacao = input("Digite o número da operação desejada: ")
+operacao = int(input("Digite o número da operação desejada: "))
 
 # Realiza a operação escolhida e exibe o resultado
-if operacao == "1":
-    resultado = num1 + num2
-    print(f"O resultado de {num1} + {num2} é: {resultado}")
-elif operacao == "2":
-    resultado = num1 - num2
-    print(f"O resultado de {num1} - {num2} é: {resultado}")
-elif operacao == "3":
-    resultado = num1 * num2
-    print(f"O resultado de {num1} x {num2} é: {resultado}")
-elif operacao == "4":
+if operacao == 1:
+    resultado = f"O resultado de {num1} + {num2} é: {num1 + num2}"
+elif operacao == 2:
+    resultado = f"O resultado de {num1} - {num2} é: {num1 - num2}"
+elif operacao == 3:
+    resultado = f"O resultado de {num1} x {num2} é: {num1 * num2}"
+elif operacao == 4:
     if num2 != 0:
-        resultado = num1 / num2
-        print(f"O resultado de {num1} ÷ {num2} é: {resultado}")
+        resultado = f"O resultado de {num1} ÷ {num2} é: {num1 / num2}"
     else:
-        print("Erro: Divisão por zero não é permitida.")
+        resultado = "Erro: Divisão por zero não é permitida."
 else:
-    print("Operação inválida.")
+    resultado = "Operação inválida."
+
+#  Exibe resultado
+print(resultado)
