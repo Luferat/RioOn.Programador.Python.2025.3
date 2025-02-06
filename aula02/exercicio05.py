@@ -15,3 +15,4 @@ novo_salario = salario + aumento
 
 # Exibe o novo salário
 print(f"O novo salário, após um aumento de 18%, é: R$ {novo_salario:.2f}")
+ 

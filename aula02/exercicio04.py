@@ -7,7 +7,7 @@ inteiro, teste e exiba se o número é par ou ímpar.
 # Solicita ao usuário que insira um número inteiro
 numero = int(input("Insira um número inteiro: "))
 
-# Verifica se o número é par ou ímpar
+# Verifica se o número é par ou ímpar usando módulo → %
 if numero % 2 == 0:
     print(f"O número {numero} é par.")
 else:

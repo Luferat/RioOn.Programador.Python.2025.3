@@ -17,3 +17,4 @@ custo_total = (dias_alugados * 50) + (km_percorridos * 0.18)
 
 # Exibe o preço a pagar
 print(f"O preço a pagar é: R$ {custo_total:.2f}")
+   
