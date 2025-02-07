@@ -13,19 +13,20 @@ atribua um conceito à nota, conforme o caso:
 # Solicita ao usuário que insira uma nota de 0 a 100
 nota = int(input('Digite uma nota de 0 a 100: '))
 
-# Atribui um conceito à nota
-if nota >= 90:   # 'nota >= 90' é uma expressão booleana que retorna True ou False
-    conceito = 'A'
-elif nota >= 80:
-    conceito = 'B'
-elif nota >= 70:
-    conceito = 'C'
-elif nota >= 60:
-    conceito = 'D'
-elif nota >= 50:
-    conceito = 'E'
-else:
-    conceito = 'F'
+# Atribui um conceito com match-case
+match nota:
+    case n if 90 <= n <= 100:
+        conceito = 'A'
+    case n if 80 <= n < 90:
+        conceito = 'B'
+    case n if 70 <= n < 80:
+        conceito = 'C'
+    case n if 60 <= n < 70:
+        conceito = 'D'
+    case n if 50 <= n < 60:
+        conceito = 'E'
+    case _:
+        conceito = 'F'
 
 # Exibe o conceito atribuído
 print(f'O conceito atribuído à nota {nota} é {conceito}')

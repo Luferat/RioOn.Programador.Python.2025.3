@@ -1,0 +1,29 @@
+Laços de repetição
+
+Dica de desenvolvimento: crie e teste cada programa no VSCode e salve-o. Junte todas as respostas em um único arquivo texto (TXT), organizando da melhor forma possível. salve o arquivo e entregue na plataforma.
+
+Crie um programa que imprima os números de 35 a 70. Use estrutura de repetição.
+
+Crie um programa que imprima os números de 70 a 50. Use estrutura de repetição.
+
+O programa deve imprimir de 1 até o número digitado pelo usuário, mas, dessa vez, apenas os números pares.
+
+O programa deve imprimir uma tabuada de 1 até 10: 1 x 1 = 1,1 x 2 = 2, ...
+
+Crie duas coleções e escreva no terminal a combinação das duas coleções, por exemplo:
+fruta = ['maçã', 'banana', 'abacate', 'uva']
+cor = ['vermelha', 'amarela', 'verde', 'roxa']
+
+Exemplo de saída:
+
+Maçã é vermelha
+Banana é amarela
+
+Escreva um programa que percorra os números de 1 a 50 e mostra na saída o seguinte:
+
+Para múltiplos de 3, imprima "Fizz".
+Para múltiplos de 5, imprima "Buzz".
+Para múltiplos de 3 e 5, imprima "FizzBuzz".
+Caso contrário, imprima o próprio número.
+Escreva um programa que crie um dicionário com pelo menos 5 produtos e seus respectivos preços. Peça ao usuário o nome de um produto. Informe o preço caso o produto exista no dicionário, ou diga que o produto não foi encontrado.
+
