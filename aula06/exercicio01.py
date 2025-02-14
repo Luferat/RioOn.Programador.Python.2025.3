@@ -6,7 +6,7 @@ positivo e exiba uma contagem regressiva até 1, usando um loop while.
 
 n = int(input("Digite um número inteiro positivo: "))
 
-if n > 0:
+if n > 0: # Verifica se o número é positivo
     while n > 0:
         print(n)
         n -= 1

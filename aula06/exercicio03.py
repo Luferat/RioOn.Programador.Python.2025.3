@@ -5,11 +5,14 @@ pedir para o usuário adivinhar. Ele deve continuar pedindo até o usuário
 acertar.
 '''
 
-# Importa o módulo random
+# Importa o módulo random que já vem com o Python
 import random
 
 # Gera um número aleatório entre 1 e 6 usando a função randint do módulo random
 numero = random.randint(1, 6)
+
+# God Mode
+print(numero)
 
 # Inicializa a variável de palpite
 palpite = 0

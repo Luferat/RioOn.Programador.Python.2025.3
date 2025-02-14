@@ -5,8 +5,11 @@ uma lista fornecida pelo usuário. O usuário insere os números separados por
 vírgula.
 '''
 
-numeros = input('Digite os números separados por vírgula: ').split(',') # '1,2,3,4,5'
+list = input("Digite os números separados por vírgula: ").split(',')
+
 soma = 0
-for numero in numeros:
-    soma += int(numero)
-print(f'A soma dos números é {soma}.')
+
+for num in list: # Itera cada item da lista
+    soma += int(num)
+
+print(f"A soma dos números é: {soma}")
