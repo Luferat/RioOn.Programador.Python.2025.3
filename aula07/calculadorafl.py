@@ -5,18 +5,21 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-def fn(numero):
+def formataNumero(numero: float) -> str | int:
     """
-    Formata um número para a saída:
-     - Converte para inteiro se ele for inteiro
-     - Troca "." por "," se ele for float
-    ATENÇÃO! Não use nos cálculos...
+    Formata um número, convertendo-o para inteiro se não tiver casas decimais ou 
+    substituindo o ponto decimal por uma vírgula caso contrário.
+
+    Args:
+        numero (float): O número a ser formatado.
+
+    Returns:
+        str | int: Retorna um inteiro se o número não tiver casas decimais ou uma string 
+        com a vírgula como separador decimal caso contrário.
     """
     if numero == int(numero):
-        numero = int(numero)
-    else:
-        numero = str(numero).replace('.', ',')
-    return numero
+        return int(numero)
+    return str(numero).replace('.', ',')
 
 
 @app.route("/")  # Criando a rota da página inicial (/) do site
@@ -27,8 +30,8 @@ def home():  # Função executada quando a página inicial (/) é solicitada
 
         <form action="/calcular" method="post" style="display:table; margin:auto;text-align:center">
             <h1>Calculadora</h1>
-            <p><input type="number" name="num1" step="0.01" required></p>
-            <p><input type="number" name="num2" step="0.01" required></p>
+            <p><input type="number" name="num1" step="0.000000000000001" required></p>
+            <p><input type="number" name="num2" step="0.000000000000001" required></p>
             <p>
                 <button type="submit" name="operacao" value="+"> + </button>
                 <button type="submit" name="operacao" value="-"> - </button>
@@ -54,14 +57,14 @@ def calcular():  # Função executada quando a rota "/calcular" é solicitada
 
     # Realiza a operação solicitada e formata a saída com o resultado
     if operacao == '+':
-        resultado = f'{fn(num1)} + {fn(num2)} = {fn(num1 + num2)}'
+        resultado = f'{formataNumero(num1)} + {formataNumero(num2)} = {formataNumero(num1 + num2)}'
     elif operacao == '-':
-        resultado = f'{fn(num1)} - {fn(num2)} = {fn(num1 - num2)}'
+        resultado = f'{formataNumero(num1)} - {formataNumero(num2)} = {formataNumero(num1 - num2)}'
     elif operacao == '*':
-        resultado = f'{fn(num1)} × {fn(num2)} = {fn(num1 * num2)}'
+        resultado = f'{formataNumero(num1)} × {formataNumero(num2)} = {formataNumero(num1 * num2)}'
     elif operacao == '/':
         if num2 != 0:
-            resultado = f'{fn(num1)} ÷ {fn(num2)} = {fn(num1 / num2)}'
+            resultado = f'{formataNumero(num1)} ÷ {formataNumero(num2)} = {formataNumero(num1 / num2)}'
         else:
             resultado = 'Erro: divisão por zero'
     else:
