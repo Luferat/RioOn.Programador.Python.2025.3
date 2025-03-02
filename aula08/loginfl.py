@@ -27,6 +27,9 @@ def index():
    <div>
 
         <h2>Site de Teste</h2>
+        <p><strong><em>Olá {usuario.capitalize()}!</em></strong></p>
+        <p>Você já pode acessar o sistema.</p>
+        <p><a href="/sair">Sair do aplicativo</a></p>
 
    </div>
 
@@ -138,6 +141,27 @@ def login():
 
     # Envia os dados para o front-end quando o login "falhar"
     return response
+
+
+@app.route('/sair')
+def logout():
+    # Armazena o HTML no cache
+    response = make_response('''
+    
+<h3>Oba!</h3>
+<p>Você saiu do aplicativo...</p>
+<p><a href="/">Página inicial</a></p>
+    
+    ''')
+
+    # Apaga o cookie do usuário por segurança
+    response.set_cookie(
+        'username',   # Nome do cookie
+        '',           # Valor do cookie
+        max_age=0     # Tempo de vida do cookie em segundos
+    )
+
+    return response  # Redireciona para a rota "entrar"
 
 
 if __name__ == '__main__':
